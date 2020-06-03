@@ -1,16 +1,17 @@
 import React, { Component } from "react"; 
 import PropTypes from "prop-types";
+import giphy from './giphy.gif';
 
 
-class Decrement extends Component{
+class Decrement extends Component{  
     constructor(props){
         super(props);
         this.state = {number: props.start}; 
     }
-
+    
     handleDecrement = (state) => {
-        if(state.number === 0){
-            return alert("Cannot be less than zero!"); 
+        if(state.number === 1){
+             return alert("Blast off");
         }
         this.setState({number: state.number - 1});
     };
